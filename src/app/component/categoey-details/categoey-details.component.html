@@ -1,0 +1,31 @@
+
+@if (detailsProduct) {
+
+    <section>
+        <h1 class="text-center text-main m-2 ">Details  category</h1>
+        <div class="row align-items-center">
+            <div class="col-md-3">
+               
+                  <img [src]="detailsProduct.image"  class="w-100" [alt]="detailsProduct.name">
+               
+            
+            </div>
+            <div class="col-md-9">  
+                
+            <div>
+                <h2>{{detailsProduct.name}}</h2>
+                <h4>{{detailsProduct.createdAt}}</h4>
+                <h4>{{detailsProduct.updatedAt}}</h4>
+                <h4>{{detailsProduct.slug}}</h4>
+              
+                  
+            </div>
+            
+            
+            </div>
+    
+         
+        </div>
+    </section>
+}
+

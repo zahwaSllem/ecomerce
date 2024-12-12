@@ -1,0 +1,61 @@
+
+
+@if (detailsProduct) {
+
+    <section>
+        <h1 class="text-center text-main m-2 ">Details Product</h1>
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                
+                <!-- <owl-carousel-o [options]="customOptionDet">
+
+                @for (details of detailsProduct.images; track  $index) {
+                    <ng-template carouselSlide>
+                        <img [src]="detailsProduct.images"   class="w-100" [alt]="" >
+                       
+                      </ng-template>
+                }
+               
+                  </owl-carousel-o> -->
+                  <img [src]="detailsProduct.imageCover"  class="w-100" [alt]="detailsProduct.title">
+               
+            
+            </div>
+            <div class="col-md-9">  
+                
+            <div>
+                <h2>{{detailsProduct.title}}</h2>
+                <p class="text-muted">{{detailsProduct.description}}</p>
+                <h3 class="h6">{{detailsProduct.category.name}}</h3>
+    
+                <div class="d-flex  align-items-center">
+                    <span class="mx-3">{{detailsProduct.price}}EGp</span>
+                    <div>
+                      @for (num of [1,2,3,4,5].slice(0,detailsProduct.ratingsAverage); track $index) {
+                       
+                       <span><i class="fas fa-star rating-color"></i></span>
+                      }
+    
+                      @if (detailsProduct.ratingsAverage%1 !==0 ) {
+                       <i class="fa-regular fa-star-half-stroke  rating-color"></i>
+                      }
+                     
+                       <span class="text-muted">{{detailsProduct.ratingsAverage}}</span>
+    
+                
+                    </div>
+                   </div>
+                   <button class="  w-25 btn-main rounded-5 "  (click)="addCart(detailsProduct.id)" >Add to cart</button>
+            </div>
+            
+            
+            </div>
+    
+         
+        </div>
+    </section>
+}
+
+
+
+  

@@ -1,0 +1,19 @@
+
+<div class="container my-5">
+    <h2 class="text-center  text-main fw-bold fs-1 mb-4">Our Brands</h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 mb-4 " *ngFor="let brand of getbrands">
+        <div class=" product p-2 text-center">
+          <img 
+            [src]="brand.brand.image" 
+            class="card-img-top p-3" 
+            alt="{{  brand.brand.name}}" 
+            style="height: 150px; object-fit: contain;">
+          <div class="card-body">
+            <h5 class="card-title">{{ brand.brand.name }}</h5>
+            <button    [routerLink]="['/details',  brand._id]"   class="btn btn-main  mt-2"     >View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -19,5 +19,4 @@ return this._HttpClient.post(`${environment.baseUrl}/api/v1/wishlist`,
 )
 }
 
-
 }
